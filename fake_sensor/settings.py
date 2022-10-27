@@ -137,3 +137,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
     ]
 }
+
+import django_heroku
+django_heroku.settings(locals())
