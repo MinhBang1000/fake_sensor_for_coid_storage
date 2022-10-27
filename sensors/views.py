@@ -26,6 +26,9 @@ class SensorViewSet(ModelViewSet):
             random_float = random.randrange(1,9,1)
             temperature = random_number + random_float/10
             data = {
+                "x": sensor.x,
+                "y": sensor.y,
+                "z": sensor.z,
                 "temperature": temperature
             }
             sensor_serializer = SensorSerialzier(instance=sensor, data=data)
