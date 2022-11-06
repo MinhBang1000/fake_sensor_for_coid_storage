@@ -13,4 +13,4 @@ class Sensor(models.Model):
     owner = models.ForeignKey(User, on_delete = models.CASCADE, related_name = "sensors")
 
     def __str__(self) -> str:
-        return self.id
+        return str(self.id) + "_" + self.owner.username
