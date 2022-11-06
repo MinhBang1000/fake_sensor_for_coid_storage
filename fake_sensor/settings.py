@@ -138,5 +138,9 @@ REST_FRAMEWORK = {
     ]
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://fake-sensors.herokuapp.com/'
+]
+
 import django_heroku
 django_heroku.settings(locals())
