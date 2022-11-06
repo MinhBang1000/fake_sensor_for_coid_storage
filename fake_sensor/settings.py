@@ -139,7 +139,7 @@ REST_FRAMEWORK = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://fake-sensors.herokuapp.com/'
+    'https://fake-sensors.herokuapp.com'
 ]
 
 import django_heroku
