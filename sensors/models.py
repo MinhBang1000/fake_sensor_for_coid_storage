@@ -9,6 +9,7 @@ class Sensor(models.Model):
     y = models.IntegerField()
     z = models.IntegerField()
     temperature = models.FloatField()
+    identify = models.IntegerField(default = 0)
     owner = models.ForeignKey(User, on_delete = models.CASCADE, related_name = "sensors")
 
     def __str__(self) -> str:
