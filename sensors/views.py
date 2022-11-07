@@ -21,7 +21,7 @@ class SensorViewSet(ModelViewSet):
         serializer.save(owner = self.request.user)
 
     def list(self, request, *args, **kwargs):
-        sensors = Sensor.objects.filter(owner = self.request.user)
+        sensors = Sensor.objects.all()
         for sensor in sensors:
             random_number = random.randrange(8,12,1)
             random_float = random.randrange(1,9,1)
