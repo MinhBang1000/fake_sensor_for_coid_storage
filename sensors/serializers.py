@@ -8,4 +8,6 @@ class SensorSerialzier(serializers.ModelSerializer):
 
     class Meta:
         model = Sensor 
-        fields = [ "id","x","y","z","temperature","identify" ]
+        fields = [ "id","x","y","z","temperature","identify","owner" ]
+        read_only_fields = ["owner"]
+        depth = 1
