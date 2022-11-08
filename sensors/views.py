@@ -30,7 +30,7 @@ class SensorViewSet(ModelViewSet):
                 "x": sensor.x,
                 "y": sensor.y,
                 "z": sensor.z,
-                "temperature": temperature
+                "temperature": temperature * (-1)
             }
             sensor_serializer = SensorSerialzier(instance=sensor, data=data)
             sensor_serializer.is_valid(raise_exception=True)
